@@ -1,0 +1,58 @@
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Login</h1>
+
+<% 
+    if(typeof message !== 'undefined'){
+        %>
+        <h4><%= message %></h4>
+        <%
+    }
+%>
+<form action="/Login" method="post">
+    <input type="email" name="email" required placeholder="Enter email">
+    <br><br>
+    <input type="password" name="password" required placeholder="Enter Password">
+    <br><br>
+    <input type="submit" value="Login">
+</form>
+
+<a href="/forget">Forget Password</a> -->
+
+<section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #508bfc;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong text-center" style="border-radius: 1rem; background-color: white;">
+                    <div class="card-body p-5">
+                        <h1 style="font-weight: bolder;font-size: 70px;"><i> User-Login</i></h1>
+                        <br>
+                        <% if (typeof message !== 'undefined') { %>
+                            <h4><%= message %></h4>
+                        <% } %>
+                        <form action="/Login" method="post">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="typeEmailX-2" style="font-size: 20px;">Please enter your Mail-Id:</label>
+                                <br>
+                                <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg"
+                                    placeholder="Enter Email" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="typePasswordX-2" style="font-size: 20px;" >Please enter your Password:</label>
+                                <br>
+                                <input type="password" name="password" id="typePasswordX-2"
+                                    class="form-control form-control-lg" placeholder="Enter Password" />
+                                <br>
+                            </div>
+                            <button class="btn btn-lg btn-block" type="submit" style="background-color: black; color: white; font-weight: bold;font-size: 30px;">Login</button>
+                        <br><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include('../layouts/footer.ejs') %>

@@ -1,0 +1,55 @@
+<%- include("../layouts/header.ejs") %>
+
+<!-- <h1>Welcome, <%= admin.name %> </h1> -->
+
+<!-- <a href="/admin/dashboard">Dashboard</a>
+
+<table style="width: 50%;">
+<tr>
+    <td><img src="/userImages/<%= admin.image %>" width="100px" height="100px" alt="<%= admin.image %>"></td>
+</tr>
+<tr>
+    <td>Email</td>
+    <td><%= admin.email %></td>
+</tr>
+<tr>
+    <td>Mobile</td>
+    <td><%= admin.mobile %></td>
+</tr>
+
+
+</table>
+
+<a href="/admin/logout">Logout</a> -->
+<!-- <div class="card" style="width: 18rem;">
+    <img src="/userImages/<%= admin.image %>" class="card-img-top" alt="<%= admin.image %>" width="100px" height="100px">
+    <div class="card-body">
+      <h5 class="card-title">Welcome, <%= admin.name %></h5>
+      <a href="/admin/dashboard" class="card-link">Dashboard</a>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Email: <%= admin.email %></li>
+      <li class="list-group-item">Mobile: <%= admin.mobile %></li>
+    </ul>
+    <div class="card-body">
+      <a href="/admin/logout" class="card-link">Logout</a>
+    </div>
+  </div> -->
+  
+  <div class="card" style="width: 25rem; background-color: wheat ; color: #508bfc;border-color: red ; ">
+    <img src="/userImages/<%= admin.image %>" class="card-img-top" alt="<%= admin.image %>" width="100px" height="100px">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 30px;">Welcome <%= admin.name %></h5>
+      <a href="/admin/dashboard" class="card-link" style="font-size: large;">Dashboard</a>
+    </div>
+    <ul class="list-group list-group-flush" style="background-color: yellowgreen;">
+      <li class="list-group-item">Email: <%= admin.email %></li>
+      <li class="list-group-item">Mobile: <%= admin.mobile %></li>
+    </ul>
+    <div class="card-body">
+      <a href="/admin/logout" class="card-link" style="font-weight: bolder;font-size: larger;">Logout</a>
+    </div>
+  </div>
+  
+
+<%- include("../layouts/footer.ejs") %>

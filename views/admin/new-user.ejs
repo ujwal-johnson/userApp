@@ -1,0 +1,68 @@
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Add New User</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <br><br>
+    <input type="text" name="mno" placeholder="Enter Mobile" required>
+    <br><br>
+    <input type="file" name="image" required>
+    <br><br>
+    <input type="submit" value="Add User">    
+</form>
+
+
+<% 
+    if(typeof message !=='undefined'){
+        %>
+        <p style="color: red;"><%= message %></p>
+        <%
+    }
+
+%>
+
+<a href="/admin/dashboard">Back</a> -->
+<section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #508bfc;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong text-center" style="border-radius: 1rem; background-color: white;">
+            <div class="card-body p-5">
+              <h1>Add New User</h1>
+              <form action="" method="post" enctype="multipart/form-data">
+                <div class="form-outline mb-4">
+                  <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Enter Name" required>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Enter Email" required>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" name="mno" id="mno" class="form-control form-control-lg" placeholder="Enter Mobile" required>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="file" name="image" id="image" style="font-size: larger; color: green;" required>
+                </div>
+                <button class="btn btn-lg btn-block" type="submit" style="background-color: #508bfc;font-weight: bolder;">Add User</button>
+              </form>
+  
+              <% if (typeof message !== 'undefined') { %>
+              <p style="color: red;"><%= message %></p>
+              <% } %>
+  <br>
+              <a href="/admin/dashboard" style="font-weight: 700;font-size: larger;">Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+<%- include('../layouts/footer.ejs') %>

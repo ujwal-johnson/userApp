@@ -1,0 +1,56 @@
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Admin Login</h1>
+<% 
+if(typeof message !== 'undefined'){
+    %>
+    <h3><%= message %></h3>    
+    <%
+}
+%>
+<form action="" method="POST">
+    <input type="email" name="email" placeholder="Enter Email">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter Password">
+    <br><br>
+    <input type="submit" value="Login">
+</form> -->
+<section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #508bfc;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong  text-center" style="border-radius: 1rem; background-color: white;">
+            <div class="card-body p-5">
+              <h1 style="font-weight: bolder;font-size: 70px;"><i>Admin Login</i> </h1>
+              <br>
+              <% if (typeof message !== 'undefined') { %>
+              <h3><%= message %></h3>
+              <% } %>
+              <form action="" method="POST">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="typeEmailX-2" style="font-size: 20px;">Please enter your Mail-Id:</label>
+                  <br>
+                  <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg"
+                    placeholder="Enter Email" />
+                    
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="typePasswordX-2" style="font-size: 20px;" >Please enter your Password:</label>
+                  <br>
+                  <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg"
+                    placeholder="Enter Password" />
+                    <br>
+                </div>
+                <button class="btn btn-lg btn-block" type="submit" style="background-color: black; color: white; font-weight: bold;">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+<%- include('../layouts/footer.ejs') %>

@@ -1,0 +1,126 @@
+<%- include('../layouts/header.ejs') %>
+
+<!-- <h1>Dashboard</h1>
+<a href="/admin/new-user">Add new user</a>
+<br><br>
+
+<form>
+   <input type="text" placeholder="Search User name,email,mobile" name="search"> 
+    <input type="submit" value="Search">
+</form>
+
+<table width="50%">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Image</th>
+        <th>Verified</th>
+        <th>Action</th>
+    </tr>
+<% 
+    if(users.length > 0){
+        for(let i=0;i<users.length;i++){
+            %>
+            <tr>
+                <td><%=users[i].name %></td>
+                <td><%=users[i].email %></td>
+                <td><%=users[i].mobile %></td>
+                <td><img src="/userImages/<%=users[i].image %>" alt="<%=users[i].image %>" width="100px" height="100px"> </td>
+                <td><%
+                    if(users[i].is_verified == 0){
+                        %>
+                        <p>Not Verified</p>
+                        <%
+                    }else{
+                        %>
+                        <p>Verified</p>
+                        <%
+                    }
+                    %></td>
+        <td>
+            <a href="/admin/edit-user?id=<%=users[i]._id %>">Edit</a>
+            <a href="/admin/delete-user?id=<%=users[i]._id %>">Delete</a>
+
+        </td>
+
+            </tr>
+            <%
+        }
+
+    }else{
+        %>
+        <tr>
+           <td colspan="5">Users Not Found</td> 
+        </tr>
+        <%
+    }
+
+%>
+
+
+
+</table>
+<br>
+
+
+<a href="/admin/home">Click to get to Home</a> -->
+
+  <div class="text-center" style="font-family:'Cabin', sans-serif; font-weight: 900; background-color: bisque;">
+<h1 style="font-size: 50px;font-weight: 700;"><i>Dashboard</i></h1>
+  </div>
+  
+    <a href="/admin/new-user">Add new user</a>
+  <br><br>
+  <div class="text-left" ></div>
+  <form>
+<input type="text" placeholder="Search User name,email,mobile" name="search" size="40">
+<input type="submit" value="Search">
+  </form>
+  <br>
+</div>
+  <table class="table" style="width: 100%;">
+    <thead class="thead-dark" style="background-color: brown;color: antiquewhite;">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Image</th>
+        <th scope="col">Verified</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (users.length > 0) {
+        for (let i = 0; i < users.length; i++) { %>
+          <tr>
+            <td><%= users[i].name %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].mobile %></td>
+            <td><img src="/userImages/<%= users[i].image %>" alt="<%= users[i].image %>" width="100px" height="100px"></td>
+            <td>
+              <% if (users[i].is_verified === 0) { %>
+                <p>Not Verified</p>
+              <% } else { %>
+                <p>Verified</p>
+              <% } %>
+            </td>
+            <td>
+              <a href="/admin/edit-user?id=<%= users[i]._id %>">Edit</a>
+              <a href="/admin/delete-user?id=<%= users[i]._id %>">Delete</a>
+            </td>
+          </tr>
+        <% }
+      } else { %>
+        <tr>
+          <td colspan="6">Users Not Found</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <a href="/admin/home">Click to get Home</a>
+  
+
+  
+
+<%- include('../layouts/footer.ejs') %>
